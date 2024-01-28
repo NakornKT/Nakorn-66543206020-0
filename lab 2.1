@@ -1,0 +1,22 @@
+#include <stdio.h>
+void reverse( char str1[], char str2[] ) ;
+int main() {
+    char text[ 50 ] = "I Love You" ;
+    char out[ 50 ] ;
+    reverse( text, out ) ;
+}
+void reverse( char str1[], char str2[]) {
+    int j, numb = 0;
+    printf("Input\t\t\tOutput\n");
+    printf("%s", str1);
+    printf("\t\t");
+    while(str1[numb] != '\0') {
+        numb++;
+    }
+    j = numb - 1;
+    for (int i = 0; i < numb; i++) {
+        str2[i] = str1[j];
+        j--;
+    }
+    printf("%s", str2);
+}
